@@ -1,2 +1,2 @@
 # flutter
-There is will share my project made on flutter and dart Programmin
+There is I will share my project made on flutter and dart Programming
