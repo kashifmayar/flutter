@@ -116,7 +116,7 @@ class _RegState extends State<Reg> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 5),
               Form(
                 key: _formKey,
                 child: Column(
@@ -127,6 +127,8 @@ class _RegState extends State<Reg> {
                         labelText: 'First Name',
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.person),
+                        filled: true,
+                        fillColor: Colors.white70,
                       ),
                       validator: (value) {
                         return value!.isEmpty ? "Please Enter First Name" : null;
@@ -135,13 +137,15 @@ class _RegState extends State<Reg> {
                         _firstName = value;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     TextFormField(
                       keyboardType: TextInputType.text,
                       decoration: const InputDecoration(
                         labelText: 'Last Name',
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.person_outline),
+                        filled: true,
+                        fillColor: Colors.white70,
                       ),
                       validator: (value) {
                         return value!.isEmpty ? "Please Enter Last Name" : null;
@@ -150,13 +154,15 @@ class _RegState extends State<Reg> {
                         _lastName = value;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     TextFormField(
                       keyboardType: TextInputType.number,
                       decoration: const InputDecoration(
                         labelText: 'CNIC',
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.credit_card),
+                        filled: true,
+                        fillColor: Colors.white70,
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -172,7 +178,7 @@ class _RegState extends State<Reg> {
                         _cnic = value;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     TextFormField(
                       controller: _dateController,
                       keyboardType: TextInputType.datetime,
@@ -180,6 +186,8 @@ class _RegState extends State<Reg> {
                         labelText: 'Date of Birth',
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.calendar_today),
+                        filled: true,
+                        fillColor: Colors.white70,
                       ),
                       readOnly: true,
                       onTap: () {
@@ -192,12 +200,14 @@ class _RegState extends State<Reg> {
                         _dateOfBirth = value;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     DropdownButtonFormField<String>(
                       decoration: const InputDecoration(
                         labelText: 'Gender',
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.person_pin),
+                        filled: true,
+                        fillColor: Colors.white70,
                       ),
                       items: ['Male', 'Female', 'Other']
                           .map((gender) => DropdownMenuItem(
@@ -212,7 +222,7 @@ class _RegState extends State<Reg> {
                         return value == null ? "Please Select Gender" : null;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: const InputDecoration(
@@ -220,6 +230,8 @@ class _RegState extends State<Reg> {
                         hintText: 'xyz@gmail.com',
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.email),
+                        filled: true,
+                        fillColor: Colors.white70,
                       ),
                       validator: (value) {
                         return value!.isEmpty ? "Please Enter Email" : null;
@@ -228,7 +240,7 @@ class _RegState extends State<Reg> {
                         _email = value;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     TextFormField(
                       obscureText: true,
                       decoration: const InputDecoration(
@@ -236,6 +248,8 @@ class _RegState extends State<Reg> {
                         hintText: 'password',
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.lock),
+                        filled: true,
+                        fillColor: Colors.white70,
                       ),
                       validator: (value) {
                         return value!.isEmpty ? "Please Enter Password" : null;
@@ -244,7 +258,7 @@ class _RegState extends State<Reg> {
                         _password = value;
                       },
                     ),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 5),
                     ElevatedButton(
                       onPressed: _registerUser,
                       style: ElevatedButton.styleFrom(
@@ -253,9 +267,10 @@ class _RegState extends State<Reg> {
                         textStyle: const TextStyle(fontSize: 18),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
+
                         ),
                       ),
-                      child: const Text('Register'),
+                      child: const Text('Register',),
                     ),
                   ],
                 ),
